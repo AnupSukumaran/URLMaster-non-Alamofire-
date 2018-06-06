@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,51 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="URLMaster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfG-Bq-ovf">
+                                <rect key="frame" x="172" y="271" width="31" height="30"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PwT-OC-ZUK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0Y-eP-tRJ">
+                                <rect key="frame" x="143" y="375" width="90" height="30"/>
+                                <state key="normal" title="AlamofireGet"/>
+                                <connections>
+                                    <action selector="AlamofireGet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4o0-FV-4pY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvV-0Y-g8C">
+                                <rect key="frame" x="140" y="459" width="96" height="30"/>
+                                <state key="normal" title="AlamofirePost"/>
+                                <connections>
+                                    <action selector="AlamofirePost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSW-zz-gJr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhJ-nb-sRX">
+                                <rect key="frame" x="173" y="178" width="30" height="30"/>
+                                <state key="normal" title="Get"/>
+                                <connections>
+                                    <action selector="GetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vtx-it-6dU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rhJ-nb-sRX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="158" id="2gZ-bW-ZDs"/>
+                            <constraint firstItem="B0Y-eP-tRJ" firstAttribute="centerX" secondItem="xvV-0Y-g8C" secondAttribute="centerX" id="9pO-Ic-xK9"/>
+                            <constraint firstItem="B0Y-eP-tRJ" firstAttribute="top" secondItem="OfG-Bq-ovf" secondAttribute="bottom" constant="74" id="FSF-ng-fMU"/>
+                            <constraint firstItem="B0Y-eP-tRJ" firstAttribute="centerX" secondItem="OfG-Bq-ovf" secondAttribute="centerX" id="X9j-kN-qka"/>
+                            <constraint firstItem="rhJ-nb-sRX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X9w-ex-Nzy"/>
+                            <constraint firstItem="xvV-0Y-g8C" firstAttribute="top" secondItem="B0Y-eP-tRJ" secondAttribute="bottom" constant="54" id="ZIq-It-vtS"/>
+                            <constraint firstItem="OfG-Bq-ovf" firstAttribute="top" secondItem="rhJ-nb-sRX" secondAttribute="bottom" constant="63" id="bN5-qc-HjL"/>
+                            <constraint firstItem="rhJ-nb-sRX" firstAttribute="trailing" secondItem="OfG-Bq-ovf" secondAttribute="trailing" id="pxo-ze-keq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
