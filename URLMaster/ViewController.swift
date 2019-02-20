@@ -18,15 +18,11 @@ class ViewController: UIViewController {
         
     }
     
-    
     @IBAction func GetAction(_ sender: Any) {
         
         viewModel.getActionMethod()
-        
-
-        
-    }
     
+    }
     
     
     @IBAction func postAction(_ sender: Any) {
@@ -35,10 +31,7 @@ class ViewController: UIViewController {
         
     }
     
-    //MARK:
-    
-    
-    
+
     @IBAction func AlamofireGet(_ sender: Any) {
         
         viewModel.AlamofireGet()
@@ -53,13 +46,6 @@ class ViewController: UIViewController {
         
     }
     
-   
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-
 
 }
 
